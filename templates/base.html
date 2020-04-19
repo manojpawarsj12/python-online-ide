@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>sedlyf</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="/static/devc.css">
+</head>
+<body id="index" class="home">
+
+    <div id="content">
+        <form method="post" action="{{ url_for(target) }}">
+    <!-- ************  CODING ZONE  ************ -->
+    <div id="code">
+            
+            <div id="title-code" class="head-section">
+              Source Code
+            <input id="launch-button" type="submit" value="Launch" />
+        </div>
+
+            {% block code %}
+            {% endblock %}
+     
+    </div>
+    
+    <!-- ************ RUNNING ZONE RESULTS ************ -->
+    
+    <div id="result">
+        
+        <div id="title-result" class="head-section">
+            Output result
+        </div>
+        {% block run %}
+        {% endblock %}
+    </div>
+    
+    <!-- ************ COMPILATION RESULTS ZONE ************ -->
+    
+    <div id="compile">
+        <div id="title-compile" class="head-section" >
+            Compilation / Output
+        </div>
+        {% block comp %}
+        {% endblock %}
+    </div>
+    <div id="testcase-status">
+
+        <div class="section-container">
+        <div class="section">
+            <div id="title-testcase" class="head-section">
+                Input
+            </div>
+            {% block testcase %}
+            {% endblock %}
+        </div>
+        <div class="section">
+            <div id="title-testcase" class="head-section">
+                status
+            </div>
+            {% block status %}
+            {% endblock %}
+        </div>
+        </div>
+    </div>
+</form>
+
+</div>
+
+</body>
+</html>

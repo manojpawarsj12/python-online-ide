@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block code %}
+<textarea id="text-code" name="code" rows={{ rows }} cols={{ cols }}>
+{{ code }}
+</textarea>
+<div id="text-code-ace" class="hidden">{{ code }}</div>
+{% endblock %}
+
+{% block run %}
+<textarea id="text-result"  readonly>{{ resrun }}</textarea>
+{% endblock %}
+
+{% block comp %}
+<textarea id="text-compile" readonly>{{ rescomp }}</textarea>
+{% endblock %}
+
+
+{% block testcase %}
+<textarea id="text-testcase" name="testcase"></textarea> <!-- you have to add name attribute to pass the value it over a request -->
+{% endblock %}
+
+{% block status %}
+<textarea id="text-status"  readonly></textarea>
+{% endblock %}
+
